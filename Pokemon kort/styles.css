@@ -1,0 +1,39 @@
+.box{
+    display: grid;
+     grid-template-columns: 1fr;  
+     grid-template-columns: 1fr; 
+     height:800px;
+}
+.card{
+    height: 400px;
+    grid-column: 1 / -1;
+    grid-row:1/-1;
+    
+    transition: all 0.5s ease;
+
+}
+.card:hover{
+    height:500px;
+    
+}
+
+.box:hover #Blastoise{
+    transform:  rotate(10deg);
+    transform-origin: bottom right;
+}
+.box:hover #Charizard{
+    transform: rotate(20deg);
+    transform-origin: bottom right;
+}
+.box:hover #Machamp{
+    transform: rotate(30deg);
+    transform-origin: bottom right;
+}
+.box:hover #Pikachu{
+    transform: rotate(40deg);
+    transform-origin: bottom right;
+}
+.box:hover #Venusaur{
+    transform: rotate(50deg);
+    transform-origin: bottom right;
+}

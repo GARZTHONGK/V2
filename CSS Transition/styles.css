@@ -1,0 +1,48 @@
+.div1 h1{
+    height: 200px;
+    width: 200px;
+}
+.div1 .h1{
+    background-color: skyblue;
+    transition-property: background-color;
+    transition-duration: 1s;
+}
+.div1 .h1:hover{
+    background-color: yellow;
+}
+.div1 .h2{
+    background-color: lightcoral;
+    transition-property: width;
+    transition-duration: .5s;
+}
+.div1 .h2:hover{
+    width:400px;
+}
+
+.div1 .h3{
+    background: lightgreen;
+    transition-property: border-radius;
+    transition-duration: .7s;
+}
+.div1 .h3:hover{
+    border-radius: 50%;
+}
+.div1 .h4{
+    background-color: lightsalmon;
+    transition: background-color .5s, 
+                border-radius .5s .5s,
+                border .5s 1s;
+    
+}
+.div1 .h4:hover{
+    background-color: lightseagreen;
+    border-radius: 50%;
+    border: 10px solid green;
+}
+.div1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 900px;
+    margin:auto;
+}
