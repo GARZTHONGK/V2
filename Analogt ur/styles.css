@@ -1,0 +1,73 @@
+body{
+    display: grid;
+    height:100vh;
+    margin: 0;
+    place-items: center;
+}
+.box{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 400px;
+    width: 400px;
+    /* background-color: lightblue; */
+}
+.clock{
+    display: grid;
+   
+    /* background-color: lightcoral; */
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+}
+#clock{
+    display: grid;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    height: 400px;
+    width: 400px;
+}
+@keyframes hourhand{
+    from {transform: translateX(500px) translateY(-500px) rotate(0deg);}
+    to {transform: translateX(500px) translateY(-500px) rotate(360deg);}
+}
+#hourhand{
+    animation: hourhand 86400s linear;
+    display: grid;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    scale: 0.3;
+    place-items: center;
+    /* transform: translateX(500px)translateY(0); */
+    transform-origin: 50% 90%;
+    /* transition: all linear; */
+    animation-iteration-count: infinite;
+    
+    
+}
+@keyframes minutehand{
+    from {transform: translateX(530px) translateY(-830px) rotate(0deg);}
+    to {transform: translateX(530px) translateY(-830px) rotate(360deg);}
+}
+
+#minutehand{
+    animation: minutehand 3600s linear;
+    display: grid;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    scale: 0.3;
+    place-items: center;
+    /* transform: translateX(500px)translateY(0); */
+    transform-origin: 50% 92%;
+    /* transition: all linear; */
+    animation-iteration-count: infinite;
+}
+.dot{
+    display: grid;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    transform: translateX(190px) translateY(190px);
+    background-color: black;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
