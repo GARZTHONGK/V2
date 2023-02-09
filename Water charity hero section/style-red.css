@@ -1,0 +1,109 @@
+:root {
+    --primary-color: hsl(197, 73%, 63%);
+    --border-radius: 5px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.overlay{
+
+}
+.overlay form fieldset{
+    width: 200px;
+    background-color: lightcoral;
+    display:inline-block;
+    position: relative;
+    overflow: hidden;
+}
+#amount{
+}
+.dollar{
+    position:absolute;c
+    left: 15px;
+}
+.month{
+
+}
+.overlay > form > a{
+    border-radius: var(--border-radius);
+    text-align: center;
+    width: 10rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1rem;
+    color: white;
+}
+.overlay > form > a:nth-of-type(1){
+    background-color: var(--primary-color);    
+    color: white;
+}
+.overlay > form > a:nth-of-type(2){
+    border-color: white;
+    background-color: gray;
+}
+form > a, .logo span{
+    text-transform: uppercase;
+}
+form > a:link,form > a:visited,form > a:active{
+    text-decoration: none;
+}
+form > a:hover{
+    color: lightslategray;
+}
+.video{
+    position:absolute;
+    right:0;
+    top: 0;
+    z-index: -1;
+    /* min-width: 100%;
+    min-height: 100%; */
+}
+.logo{
+    color: white;
+    display: flex;
+    max-width: 20vh;
+    align-content: center;
+    position: absolute;
+    top:0;
+}
+.logo span{
+    margin:auto;
+}
+.logo > svg{
+    filter: invert(97%) sepia(0%) saturate(2669%) hue-rotate(300deg) brightness(117%) contrast(103%);
+    height: 3rem;
+    width: 3rem;
+    /* https://codepen.io/sosuke/pen/Pjoqqp */
+}
+nav{
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100vh;
+    font-size: 2rem;
+    /* text-align: center; */
+    display:flex;
+    justify-content: center;
+    
+    
+}
+nav ul{
+    list-style-type: none;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+nav li{
+    text-decoration: none;
+    margin: 1rem;
+}
+a:link, a:visited, a:active{
+    text-decoration: 1 none;
+    color: white;
+}
+a:hover{
+    color: lightslategray;
+}
