@@ -1,3 +1,6 @@
+:root{
+    --green: #7bc144;
+}
 @font-face {
     font-family: mukta;
     src: url(Fonts/Mukta-Regular.ttf);
@@ -7,9 +10,7 @@ body{
     padding: 0;
     font-family: mukta;
 }
-*{
-    /* color: white; */
-}
+
 @media screen and (max-width: 720px)
 {
     .nav{
@@ -20,6 +21,8 @@ body{
         position:sticky;
         top: 0;
         width:100%;
+        z-index: 10;
+        background-color: white;
     }
 
     .divindiv{
@@ -31,15 +34,26 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        color: white;
+        text-align: center;
+        
+    }
+    .divindiv h1{
+        text-transform: uppercase;
+        font-size: 3rem;
     }
     .divindiv a{
         height: 40px;
         width: 130px;
         border-radius: 5px;
-        background-color: lightgreen;
+        background-color: var(--green);
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .divindiv a:link,.divindiv a:visited, .divindiv:hover, .divindiv:active{
+        text-decoration: none;
+        color: white;
     }
     .hero-02{
         background-color: white;
@@ -48,17 +62,36 @@ body{
         
     }
     .tjenester{
-        background-color: lightcoral;
-        display: flex;
-        flex-direction: column;
-        flex-wrap:wrap;
-        justify-content: center;
+        /* background-color: lightcoral; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* grid-template-rows: 1fr 1fr; */
         align-items: center;
+        justify-items: center;
+    }
+    .tjenester h1{
+        grid-column: 1/-1;
     }
     .tjenester article{
         display:flex;
-        width:50vw;
-        margin: 100px;
+        width: 200px;
+        height: 300px;
+        margin: 0px;
+        flex-direction: column;
+        text-align: center;
+        padding: 0px;
         
+    }
+    .tjenester article img{
+        scale: 0.8;
+    }
+    .tjenester article:nth-of-type(1){
+        grid-column: 1;
+    }
+    .tjenester article:nth-of-type(2){
+        grid-column: 2;
+    }
+    .tjenester article h2{
+        font-size: 1.2rem;
     }
 }
