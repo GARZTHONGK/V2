@@ -2,6 +2,7 @@
     --green: #7bc144;
     --orange: #edcb35;
     --dark-gray: #333333;
+    --svg-gray: #767676;
     --arrow-down: polygon(0% 0%, 100% 0%, 100% 85%, 60% 85%, 51% 100%, 40% 85%, 0 85%);
     --arrow-up: polygon(50% 50px, 60% 0, 100% 0, 100% 100%, 0 100%, 0 0, 40% 0);
 }
@@ -31,8 +32,7 @@ body{
     background-color: var(--dark-gray);
 }
 
-@media screen and (max-width: 720px)
-{
+
     .nav{
         display:flex;
         align-items: center;
@@ -47,6 +47,8 @@ body{
 
     .divindiv{
         background-image: url(Materialer/hero-02.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
         height: 500px;
         background-position: center;
         display: flex;
@@ -78,7 +80,7 @@ body{
     .tjenester{
         /* background-color: lightcoral; */
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         /* grid-template-rows: 1fr 1fr; */
         align-items: center;
         justify-items: center;
@@ -108,21 +110,25 @@ body{
     }
     .ombring{
         background-color: var(--orange);
-        padding: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 150px;
         clip-path: var(--arrow-up);
-        margin-top: 20px;
-        padding-bottom: 50px;
     }
     .ombring h1{
         font-size: 2rem;
         text-align: center;
+        grid-column: 1/-1;
     }
     .ombring img{
+        grid-column: 1/-1;
         height: 150px;
         width: 150px;
+        margin: auto;
+    }
+    .ombring #gray-button{
+        grid-column: 1/-1;
+        margin: auto;
     }
     
     .e-handel{
@@ -187,7 +193,8 @@ body{
     }
     .join{
         background-image: url(Materialer/budbil1.jpg);
-        background-position: right;
+        background-position: center;
+        background-size: cover;
         clip-path: var(--arrow-up);
         background-repeat: no-repeat;
         display: flex;
@@ -211,9 +218,22 @@ body{
         padding: 30px;
         clip-path: var(--arrow-up);
         margin-top: -50px;
+        
+        
     }
+    .info{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .hovedkvarter{
+        grid-row: 1/-1;
+    }
+    
+    
     .kontakt h1{
         color: white;
+        text-align: center;
     }
     .kontakt h2{
         color: #7bc144;
@@ -222,5 +242,45 @@ body{
         color: white;
     }
     
-
-}
+    .socials{
+        height: 100px;
+        width: 250px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+    }
+    .socials svg{
+        height: 50px;
+        width: 50px;
+        fill: var(--svg-gray);
+    }
+    @media screen and (max-width: 720px) {
+        .tjenester{
+            /* background-color: lightcoral; */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            /* grid-template-rows: 1fr 1fr; */
+            align-items: center;
+            justify-items: center;
+            background-color: white;
+            clip-path: var(--arrow-up);
+            margin-top: -150px;
+            padding-top: 30px;
+        }
+        .ombring{
+        background-color: var(--orange);
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        clip-path: var(--arrow-up);
+        margin-top: 20px;
+        padding-bottom: 50px;
+        }
+        .kontakt{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        
+    }
